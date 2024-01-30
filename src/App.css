@@ -1,0 +1,60 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.translatedImg {
+  transform: translateX(-70vw);
+}
+.hidden-section{
+ position: absolute;
+ transform: translateY(120vh);
+}
+.translatedSection{
+  border-radius:20px ;
+  transform: translateY(-5vh);
+  transition: 2.5s ease-in-out;
+  
+}
+.translatedText{
+  
+  transform: translateY(-500vh);
+  transition: 2.5s ease-in-out;
+}
+.circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.rotating-half-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #333;
+  border-top: none;
+  transform-origin: 50% 100%;
+  animation: rotateAnimation 2s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
